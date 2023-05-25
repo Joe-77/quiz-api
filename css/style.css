@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Tahoma, Arial;
+}
+.container {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 15px;
+}
+.container header {
+  display: flex;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.container header .category {
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.5;
+  animation: change-color 2s infinite alternate;
+  color: #8b1874;
+}
+@keyframes change-color {
+  0% {
+    color: #8b1874;
+  }
+  25% {
+    color: #b71375;
+  }
+  50% {
+    color: #fc4f00;
+  }
+  75% {
+    color: #f79540;
+  }
+}
+.container header .count {
+  font-size: 14px;
+  color: gray;
+  font-weight: bold;
+}
+.container .question {
+  padding: 20px;
+  margin-top: 15px;
+  background-color: #fff;
+}
+.container .answers {
+  padding: 0 20px 20px;
+  background-color: #fff;
+}
+.container .answers .answer {
+  padding: 15px;
+  display: flex;
+  background-color: #f9f9f9;
+}
+.container .answers .answer input:checked + label {
+  color: #0075ff;
+}
+.container .answer label {
+  margin-left: 10px;
+  line-height: 1.5;
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container .answers .answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+#btn {
+  border: none;
+  background-color: #0075ff;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 0;
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#btn:focus {
+  outline: none;
+}
+.slider span {
+  display: block;
+  width: 50px;
+  height: 20px;
+  background-color: #fea1a1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+}
+
+.remove {
+  display: none;
+}
+.result {
+  text-align: center;
+}
+.per {
+  color: #0075ff;
+  font-size: 26px;
+  font-weight: bold;
+}
+.mid {
+  color: #b71375;
+  font-size: 26px;
+  font-weight: bold;
+}
+.lost {
+  color: red;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.re {
+  margin-bottom: 15px;
+  font-size: 26px;
+  display: none;
+}
+.re p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: gray;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: auto;
+  }
+}
